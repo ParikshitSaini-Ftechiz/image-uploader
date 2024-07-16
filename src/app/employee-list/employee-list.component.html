@@ -1,0 +1,29 @@
+<div>
+  <div class="searchBox">
+    <input type="text" placeholder="Search by name" [(ngModel)]="searchTerm" class="form-control" />
+    <button (click)="onSort('asc')" class="btn btn-primary"><i class="fa-solid fa-arrow-down-a-z"></i></button>
+    <button (click)="onSort('desc')" class="btn btn-primary"><i class="fa-solid fa-arrow-down-z-a"></i></button>
+
+  </div>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Sno.</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees | search:searchTerm | sort:sortDirection:sortField ; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td> {{ employee.employee_name }}</td>
+        <td>{{ employee.employee_salary }}</td>
+        <td>{{ employee.employee_age }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

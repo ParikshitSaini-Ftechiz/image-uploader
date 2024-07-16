@@ -6,20 +6,31 @@ import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { ImageListComponent } from './image-list/image-list.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeService } from './employee.service';
+import { SortPipe } from './sort.pipe';
+import { SearchPipe } from './search.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageUploadComponent,
-    ImageListComponent
+    ImageListComponent,
+    EmployeeListComponent,
+    SortPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

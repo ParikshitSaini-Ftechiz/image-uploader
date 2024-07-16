@@ -23,6 +23,27 @@ input[type="file"] {
   max-width: 350px;
 }
 
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+
+  input {
+    flex: 1;
+    height: 40px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 40px;
+  }
+}
+
 .ImageBox {
   display: flex;
   align-items: center;
@@ -58,4 +79,9 @@ input[type="file"] {
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba($color: #595959, $alpha: 0.5);
+}
+
+table {
+  border-radius: 5px;
+  overflow: hidden;
 }
