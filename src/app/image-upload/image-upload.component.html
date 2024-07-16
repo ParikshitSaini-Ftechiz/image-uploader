@@ -1,0 +1,13 @@
+<div>
+  <h2>Upload Image</h2>
+  <div class="mb-3">
+  </div>
+  <input class="form-control" type="file" (change)="onImageUpload($event)" />
+  <div class="ImageBox">
+    <div *ngFor="let image of images">
+      <img [src]="image.url" alt="{{ image.title }}" width="100" />
+      <h3>{{ image.title }}</h3>
+
+    </div>
+  </div>
+</div>

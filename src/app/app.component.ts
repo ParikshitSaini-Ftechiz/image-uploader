@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Image-uploader';
+  constructor(private toastr: ToastrService) { }
+
+  @HostListener('window:online', ['$event'])
+  handleOnline(event: Event) {
+    this.toastr.success('You are online!');
+  }
+
+  @HostListener('window:offline', ['$event'])
+  handleOffline(event: Event) {
+    this.toastr.error('You are offline!');
+  }
 }

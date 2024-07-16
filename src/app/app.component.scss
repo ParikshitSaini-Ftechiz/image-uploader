@@ -1,0 +1,25 @@
+.container {
+  padding: 20px;
+  background-color: #D6BD98;
+  border-radius: 15px;
+  margin-top: 30px;
+
+  nav {
+    padding: 8px 0 25px;
+
+    a {
+      text-decoration: none;
+      color: #1A3636;
+      background-color: #D6BD98;
+      padding: 10px;
+      border-radius: 5px;
+
+      &.active-link {
+        font-weight: bold;
+        background-color: #c0a57d;
+
+      }
+    }
+
+  }
+}

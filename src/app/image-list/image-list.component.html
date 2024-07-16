@@ -1,0 +1,16 @@
+<div>
+  <h2>Image List</h2>
+  <div class="ImageBox">
+    <div *ngFor="let image of paginatedImages" class="position-relative">
+      <img [src]="image.url" alt="{{ image.title }}" width="100" />
+      <h3>{{ image.title }}</h3>
+      <button (click)="deleteImage(image.title)" class="delete"><i class="fa-solid fa-trash text-danger"></i></button>
+    </div>
+  </div>
+  <div class="btn-group mt-4">
+    <button (click)="previousPage()" [disabled]="currentPage === 0" class="btn btn-primary">Previous</button>
+    <button (click)="nextPage()" [disabled]="(currentPage + 1) * pageSize >= images.length"
+      class="btn btn-primary">Next</button>
+
+  </div>
+</div>

@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+input {
+  border: 1px solid #1A3636;
+
+  &:focus {
+    box-shadow: none !important;
+    border: 1px solid #1A3636 !important;
+  }
+}
+
+input[type="file"] {
+  max-width: 350px;
+}
+
+.ImageBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+
+
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+
+  }
+
+  h3 {
+    background-color: white;
+    margin-bottom: 0;
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+.delete {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba($color: #595959, $alpha: 0.5);
+}
